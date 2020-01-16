@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+	<h3>Dashboard</h3>
+{% endblock %}
+
+{% block body %}
+<div class="search">
+<form action="{{url_for('dashboard')}}" method="POST">
+    <input name="search" type="text" class="form-control" id="formGroupExampleInput" placeholder="Search">
+    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+</form>
+</div>
+
+<h3>{{message}}</h3>
+
+<ul>
+        {% for search_value in search_values %}
+            <li>
+                <a href="{{ url_for('book', isbn=search_value.isbn) }}">
+                    "Book Name is {{ search_value.title }} by {{ search_value.author }}
+                </a>
+            </li>
+        {% endfor %}
+</ul>
+{% endblock %}
