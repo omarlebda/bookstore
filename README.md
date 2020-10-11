@@ -2,6 +2,9 @@
 
 Web Programming with Python and JavaScript
 
+Book store web application using flask framewrok
+link of a video of the application:
+https://www.youtube.com/watch?v=26xwcf9BmFY
 
 In my import.py file:
 
